@@ -1,231 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurseva - Privacy Policy & User Agreement</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <title>Nurseva – Privacy Policy & User Agreement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #fef5f8 0%, #fff 100%);
-            min-height: 100vh;
-        }
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --primary: #6c5ce7;
+      --primary-soft: #ece9ff;
+      --accent: #ffb6c8;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --shadow-soft: 0 22px 55px rgba(15, 23, 42, 0.16);
+      --radius-lg: 24px;
+      --radius-pill: 999px;
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(252, 138, 164, 0.1);
-            margin-bottom: 30px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #fc8aa4 0%, #ff6b88 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(252, 138, 164, 0.3);
-        }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #eef2ff 0, #f5f7fb 40%, #ffffff 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 16px;
+    }
 
-        h1 {
-            color: #fc8aa4;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+    .shell {
+      width: 100%;
+      max-width: 980px;
+    }
 
-        .tagline {
-            color: #666;
-            font-size: 1.1em;
-        }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 28px 26px 24px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
 
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    @media (min-width: 768px) {
+      .card {
+        padding: 32px 36px 30px;
+      }
+    }
 
-        .nav-button {
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #fc8aa4 0%, #ff6b88 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(252, 138, 164, 0.3);
-        }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
 
-        .nav-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(252, 138, 164, 0.4);
-        }
+    .logo-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 24px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #ece9ff 60%, #e0f2fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      overflow: hidden;
+    }
 
-        .content-section {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(252, 138, 164, 0.1);
-            margin-bottom: 30px;
-        }
+    .logo-wrap img {
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: contain;
+      display: block;
+    }
 
-        h2 {
-            color: #fc8aa4;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #fef5f8;
-        }
+    .title-block {
+      flex: 1;
+      min-width: 200px;
+    }
 
-        h3 {
-            color: #ff6b88;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
+    .app-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #020617;
+      margin-bottom: 4px;
+    }
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+    .tagline {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
 
-        ul, ol {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--primary-soft);
+      color: #4338ca;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
 
-        li {
-            margin-bottom: 10px;
-        }
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.25);
+    }
 
-        .highlight-box {
-            background: #fef5f8;
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid #fc8aa4;
-            margin: 20px 0;
-        }
+    .nav-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 12px;
+    }
 
-        .contact-info {
-            background: linear-gradient(135deg, #fef5f8 0%, #fff 100%);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
+    .nav-tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #666;
-            margin-top: 40px;
-        }
+    .nav-link {
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      background: #f3f4ff;
+      color: #3730a3;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+    }
 
-        .last-updated {
-            color: #999;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
+    .nav-link span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #818cf8;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
+    .nav-link:hover {
+      background: #e0e7ff;
+      box-shadow: 0 8px 18px rgba(79, 70, 229, 0.18);
+      transform: translateY(-1px);
+    }
 
-            header {
-                padding: 30px 15px;
-            }
+    .nav-link.secondary {
+      background: #f9fafb;
+      color: #374151;
+      border-color: #e5e7eb;
+    }
 
-            .content-section {
-                padding: 25px 20px;
-            }
+    .badge-version {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
 
-            h1 {
-                font-size: 1.5em;
-            }
+    .badge-version strong {
+      font-weight: 600;
+      color: #4b5563;
+    }
 
-            .nav-button {
-                padding: 12px 20px;
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+      gap: 24px;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .section-main h2 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    .section-main p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .section-main ul {
+      margin: 6px 0 10px 18px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .section-main li + li {
+      margin-top: 4px;
+    }
+
+    .section-main h3 {
+      font-size: 0.95rem;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      color: #1f2933;
+    }
+
+    .section-side {
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      background: radial-gradient(circle at top right, #eef2ff 0, #f9fafb 40%, #ffffff 100%);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .section-side h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    .section-side p,
+    .section-side li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .section-side ul {
+      margin: 4px 0 8px 16px;
+    }
+
+    .contact-block {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.6);
+      font-size: 0.86rem;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .footer a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">N</div>
-            <h1>Nurseva</h1>
-            <p class="tagline">Smart Breast Pump Control Application</p>
-        </header>
-
-        <div class="nav-buttons">
-            <a href="privacy-policy.html" class="nav-button">📋 Privacy Policy</a>
-            <a href="user-agreement.html" class="nav-button">📜 User Agreement</a>
+  <div class="shell">
+    <main class="card" aria-labelledby="page-title">
+      <header class="header">
+        <div class="logo-wrap">
+          <!-- Logo: place logo-nurseva.png in the same repo -->
+          <img src="logo-nurseva.png" alt="Nurseva logo" />
         </div>
-
-        <div class="content-section">
-            <h2>Welcome to Nurseva</h2>
-            <p>
-                Nurseva is a smart application designed to help mothers control and monitor their breast pumps efficiently. 
-                We are committed to providing a secure, user-friendly experience while respecting your privacy and data.
-            </p>
-
-            <div class="highlight-box">
-                <h3>🔒 Your Privacy Matters</h3>
-                <p>
-                    We take your privacy seriously. Nurseva only collects the minimum data necessary to provide you with the best experience. 
-                    All your health and pumping data stays on your device and is never shared without your explicit consent.
-                </p>
-            </div>
-
-            <h3>📱 Key Features</h3>
-            <ul>
-                <li><strong>Bluetooth Control:</strong> Seamlessly connect and control your breast pump via Bluetooth</li>
-                <li><strong>Session Tracking:</strong> Monitor pumping sessions, duration, and milk volume</li>
-                <li><strong>Feeding Records:</strong> Keep track of feeding times and amounts</li>
-                <li><strong>Device Management:</strong> Easy pairing and management of multiple devices</li>
-                <li><strong>Privacy First:</strong> All data stored locally on your device</li>
-            </ul>
-
-            <h3>📄 Important Documents</h3>
-            <p>Please review our legal documents to understand how we protect your privacy and the terms of using our application:</p>
-            <ul>
-                <li><strong>Privacy Policy:</strong> Learn how we collect, use, and protect your information</li>
-                <li><strong>User Agreement:</strong> Understand the terms and conditions of using Nurseva</li>
-            </ul>
-
-            <div class="contact-info">
-                <h3>📧 Contact Us</h3>
-                <p>If you have any questions, concerns, or feedback, please don't hesitate to reach out:</p>
-                <p><strong>Website:</strong> www.nursevacare.com</p>
-                <p><strong>Contact:</strong> info@nursevacare.com</p>
-            </div>
+        <div class="title-block">
+          <div id="page-title" class="app-name">Nurseva</div>
+          <div class="tagline">Smart breast pump companion for a calmer breastfeeding experience.</div>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Wearable pump control · Session tracking · Privacy-first design
+          </div>
         </div>
+      </header>
 
-        <footer>
-            <p>&copy; 2025 Nurseva. All rights reserved.</p>
-            <p class="last-updated">Version 1.0.3 | Last Updated: October 31, 2025</p>
-        </footer>
-    </div>
+      <div class="nav-row">
+        <nav class="nav-tabs" aria-label="Legal documents">
+          <a class="nav-link" href="privacy-policy.html">
+            <span class="dot"></span>
+            <span>Privacy Policy</span>
+          </a>
+          <a class="nav-link secondary" href="user-agreement.html">
+            <span>User Agreement</span>
+          </a>
+        </nav>
+        <div class="badge-version">
+          <strong>Version:</strong> 1.0.3 · <strong>Last updated:</strong> October&nbsp;31,&nbsp;2025
+        </div>
+      </div>
+
+      <section class="content">
+        <section class="section-main">
+          <h2>Welcome to Nurseva</h2>
+          <p>
+            Nurseva is a smart application designed to help mothers control and monitor their
+            breast pumps efficiently. We are committed to providing a secure, intuitive
+            experience while respecting your privacy and data.
+          </p>
+
+          <h3>Your privacy matters</h3>
+          <p>
+            We collect only the minimum information required to deliver and improve the core
+            features of the app. Your health and pumping data stay on your device unless you
+            explicitly choose to sync or share them.
+          </p>
+
+          <h3>Key app capabilities</h3>
+          <ul>
+            <li>Bluetooth control of your wearable breast pump</li>
+            <li>Session tracking (duration, patterns, and comfort settings)</li>
+            <li>Optional notes and records to support your feeding routine</li>
+            <li>Device management and pairing for multiple pumps</li>
+            <li>Privacy-first approach with transparent data usage</li>
+          </ul>
+
+          <h3>About our Privacy Policy</h3>
+          <p>
+            The full Privacy Policy explains in detail:
+          </p>
+          <ul>
+            <li>What information we collect (device data, usage data, optional account data)</li>
+            <li>How we use and protect your information</li>
+            <li>When limited third-party services may be involved</li>
+            <li>Your rights to access, correct, or delete your data</li>
+          </ul>
+          <p>
+            To read the full legal text, please use the
+            <strong>“Privacy Policy”</strong> button above.
+          </p>
+        </section>
+
+        <aside class="section-side" aria-label="Quick legal summary">
+          <h3>At a glance</h3>
+          <ul>
+            <li>We do not sell your personal data.</li>
+            <li>Bluetooth is used only to connect and control your pump.</li>
+            <li>Locally stored data is removed when you uninstall the app.</li>
+            <li>Optional cloud or analytics tools follow strict privacy standards.</li>
+          </ul>
+
+          <div class="contact-block">
+            <strong>Contact</strong><br />
+            Website: <a href="https://www.nursevacare.com" target="_blank" rel="noopener noreferrer">
+              www.nursevacare.com
+            </a><br />
+            Email: <a href="mailto:info@nursevacare.com">info@nursevacare.com</a>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <div>© 2025 Nurseva. All rights reserved.</div>
+        <div>
+          Hosted on GitHub Pages ·
+          <a href="https://github.com/MuhammedAliErken/Nurseva-privacy" target="_blank" rel="noopener noreferrer">
+            View repository
+          </a>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
