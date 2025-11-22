@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nurseva - Privacy Policy & User Agreement</title>
+
     <style>
+        /* Nurseva Pantone Color Palette */
+        :root {
+            --nurseva-primary: #DFCDB5; /* Pantone 13-1008 TPG */
+            --nurseva-secondary: #EAE0D2; /* Pantone 12-0601 TPG */
+            --text: #333;
+            --text-soft: #666;
+            --text-light: #999;
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,8 +25,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #fef5f8 0%, #fff 100%);
+            color: var(--text);
+            background: linear-gradient(135deg, var(--nurseva-secondary) 0%, #ffffff 100%);
             min-height: 100vh;
         }
 
@@ -28,35 +39,44 @@
         header {
             text-align: center;
             padding: 40px 20px;
-            background: white;
+            background: var(--white);
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(252, 138, 164, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
             margin-bottom: 30px;
         }
 
+        /* LOGO ALANI */
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             margin: 0 auto 20px;
-            background: linear-gradient(135deg, #fc8aa4 0%, #ff6b88 100%);
             border-radius: 20px;
+
+            /* Arka planı Pantone renklerine uygun nötr ton */
+            background: linear-gradient(135deg, var(--nurseva-secondary) 0%, var(--nurseva-primary) 100%);
+
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(252, 138, 164, 0.3);
+            overflow: hidden;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
         }
 
         h1 {
-            color: #fc8aa4;
+            color: var(--nurseva-primary);
             font-size: 2em;
             margin-bottom: 10px;
         }
 
         .tagline {
-            color: #666;
+            color: var(--text-soft);
             font-size: 1.1em;
         }
 
@@ -69,37 +89,37 @@
 
         .nav-button {
             padding: 15px 30px;
-            background: linear-gradient(135deg, #fc8aa4 0%, #ff6b88 100%);
-            color: white;
+            background: var(--nurseva-primary);
+            color: var(--white);
             text-decoration: none;
             border-radius: 12px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(252, 138, 164, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .nav-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(252, 138, 164, 0.4);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
         .content-section {
-            background: white;
+            background: var(--white);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(252, 138, 164, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
             margin-bottom: 30px;
         }
 
         h2 {
-            color: #fc8aa4;
+            color: var(--nurseva-primary);
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #fef5f8;
+            border-bottom: 3px solid var(--nurseva-secondary);
         }
 
         h3 {
-            color: #ff6b88;
+            color: var(--nurseva-primary);
             margin-top: 25px;
             margin-bottom: 15px;
         }
@@ -119,15 +139,15 @@
         }
 
         .highlight-box {
-            background: #fef5f8;
+            background: var(--nurseva-secondary);
             padding: 20px;
             border-radius: 12px;
-            border-left: 4px solid #fc8aa4;
+            border-left: 4px solid var(--nurseva-primary);
             margin: 20px 0;
         }
 
         .contact-info {
-            background: linear-gradient(135deg, #fef5f8 0%, #fff 100%);
+            background: var(--nurseva-secondary);
             padding: 20px;
             border-radius: 12px;
             margin-top: 20px;
@@ -136,44 +156,35 @@
         footer {
             text-align: center;
             padding: 30px 20px;
-            color: #666;
+            color: var(--text-soft);
             margin-top: 40px;
         }
 
         .last-updated {
-            color: #999;
+            color: var(--text-light);
             font-size: 0.9em;
             margin-top: 10px;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            header {
-                padding: 30px 15px;
-            }
-
-            .content-section {
-                padding: 25px 20px;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            .nav-button {
-                padding: 12px 20px;
-                font-size: 0.9em;
-            }
+            .container { padding: 10px; }
+            header { padding: 30px 15px; }
+            .content-section { padding: 25px 20px; }
+            h1 { font-size: 1.6em; }
+            .nav-button { padding: 12px 20px; font-size: 0.9em; }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+
         <header>
-            <div class="logo">N</div>
+            <div class="logo">
+                <!-- Logonun adını buraya yaz → örneğin logo.png -->
+                <img src="logo.png" alt="Nurseva Logo">
+            </div>
+
             <h1>Nurseva</h1>
             <p class="tagline">Smart Breast Pump Control Application</p>
         </header>
@@ -187,38 +198,27 @@
             <h2>Welcome to Nurseva</h2>
             <p>
                 Nurseva is a smart application designed to help mothers control and monitor their breast pumps efficiently. 
-                We are committed to providing a secure, user-friendly experience while respecting your privacy and data.
+                We are committed to providing a secure, user-friendly experience while respecting your privacy.
             </p>
 
             <div class="highlight-box">
                 <h3>🔒 Your Privacy Matters</h3>
-                <p>
-                    We take your privacy seriously. Nurseva only collects the minimum data necessary to provide you with the best experience. 
-                    All your health and pumping data stays on your device and is never shared without your explicit consent.
-                </p>
+                <p>Nurseva collects only the minimum data needed to operate. Pump and health data stay on your device unless you choose otherwise.</p>
             </div>
 
             <h3>📱 Key Features</h3>
             <ul>
-                <li><strong>Bluetooth Control:</strong> Seamlessly connect and control your breast pump via Bluetooth</li>
-                <li><strong>Session Tracking:</strong> Monitor pumping sessions, duration, and milk volume</li>
-                <li><strong>Feeding Records:</strong> Keep track of feeding times and amounts</li>
-                <li><strong>Device Management:</strong> Easy pairing and management of multiple devices</li>
-                <li><strong>Privacy First:</strong> All data stored locally on your device</li>
-            </ul>
-
-            <h3>📄 Important Documents</h3>
-            <p>Please review our legal documents to understand how we protect your privacy and the terms of using our application:</p>
-            <ul>
-                <li><strong>Privacy Policy:</strong> Learn how we collect, use, and protect your information</li>
-                <li><strong>User Agreement:</strong> Understand the terms and conditions of using Nurseva</li>
+                <li><strong>Bluetooth Control</strong></li>
+                <li><strong>Session Tracking</strong></li>
+                <li><strong>Feeding Records</strong></li>
+                <li><strong>Device Management</strong></li>
+                <li><strong>Privacy First</strong></li>
             </ul>
 
             <div class="contact-info">
                 <h3>📧 Contact Us</h3>
-                <p>If you have any questions, concerns, or feedback, please don't hesitate to reach out:</p>
                 <p><strong>Website:</strong> www.nursevacare.com</p>
-                <p><strong>Contact:</strong> info@nursevacare.com</p>
+                <p><strong>Email:</strong> info@nursevacare.com</p>
             </div>
         </div>
 
